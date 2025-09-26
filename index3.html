@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Official webpage of Harmony Heights, featuring our latest music, tour dates, and exclusive content for our fans.">
+    <title>the marías</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<h1>The Marías</h1>
+<p class="indie-desc">The Marías é uma banda de indie pop de Los Angeles, Califórnia, Estados Unidos. São conhecidos por tocar músicas em inglês e espanhol, além de infundir sua música com elementos de gêneros como indie pop, música psicodélica e dream pop.</p>
+
+<div class="indie-slider">
+    <button class="slide-btn prev" aria-label="Foto anterior">&#10094;</button>
+    <div class="slide-track">
+        <img class="slide-img active" src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcSU3rd2H_CyaeacKxs1ohALkjSAgF82uidIda1lZArDA7zMOV2v4V8uJJxC3xIF2voWexUQT5rKyMew6FUksBDUhglCSIc928VPPRWxPA" alt="Harmony Heights Band Photo">
+        <img class="slide-img" src="https://cdn-images.dzcdn.net/images/artist/9a81e875aa2689278b4ad8c385aacd12/1900x1900-000000-81-0-0.jpg" alt="Harmony Heights Album Cover">
+        <img class="slide-img" src="https://res.cloudinary.com/shotgun/image/upload/c_limit,w_750/fl_lossy/f_auto/q_auto/production/artworks/artists/themarias.jpg" alt="Harmony Heights Bass/Guitars: John Smith">
+        <img class="slide-img" src="https://media.altpress.com/fkdgxpscnt/uploads/2024/04/21/highresmarias-4.jpg" alt="Harmony Heights Drums: Trevor G.">
+    </div>
+    <button class="slide-btn next" aria-label="Próxima foto">&#10095;</button>
+</div>
+
+
+<h2>Escute o último lançamento</h2>
+<div class="indie-spotify-embed">
+    <iframe data-testid="embed-iframe" class="indie-spotify-frame" src="https://open.spotify.com/embed/track/4pwJ6OujVQL3IpCr8KeXIg?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+
+
+<h2>Nossa performance</h2>
+<div class="indie-video-wrapper">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/nTejAxg7byc?si=it06_ptNwEd9_g4T" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</div>
+
+
+<h2>Tour</h2>
+<ul class="indie-tour">
+    <li>
+        <span class="tour-date">Set 26, 2025</span><br>
+        <span class="tour-city">Columbia, MD</span><br>
+        <a href="https://example.com/purchase-tickets-harmony-heights-orlando" target="_blank" class="tour-link">Comprar Ingresso</a>
+    </li>
+    <li>
+        <span class="tour-date">Set 28, 2025</span><br>
+        <span class="tour-city">Forest Hills, NY</span><br>
+        <a href="https://example.com/purchase-tickets-harmony-heights-slc" target="_blank" class="tour-link">Comprar Ingresso</a>
+    </li>
+</ul>
+
+
+<h2>Nossas redes sociais</h2>
+<p class="indie-social">Fique por dentro das novidades e lançamentos:</p>
+<div class="indie-social-links">
+    <a href="https://www.facebook.com/themariasmp3/?locale=pt_BR">Facebook</a>
+    <a href="https://www.instagram.com/themarias/">Instagram</a>
+    <a href="https://x.com/themarias">Twitter</a>
+</div>
+
+
+<h2>Entrem em contato</h2>
+<form class="indie-form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" placeholder="Seu nome">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="seu@email.com">
+        <label for="subject">Assunto:</label>
+        <input type="text" id="subject" name="subject" placeholder="Assunto">
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" placeholder="Escreva sua mensagem..."></textarea>
+        <input type="submit" value="Enviar">
+</form>
+
+<script>
+// Indie Slide/Carrossel Simples
+const slides = document.querySelectorAll('.slide-img');
+const prevBtn = document.querySelector('.slide-btn.prev');
+const nextBtn = document.querySelector('.slide-btn.next');
+let currentSlide = 0;
+
+function showSlide(idx) {
+    slides.forEach((img, i) => {
+        img.classList.toggle('active', i === idx);
+    });
+}
+
+prevBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    showSlide(currentSlide);
+});
+nextBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    showSlide(currentSlide);
+});
+
+// Swipe para mobile
+let startX = 0;
+const track = document.querySelector('.slide-track');
+track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+track.addEventListener('touchend', e => {
+    let endX = e.changedTouches[0].clientX;
+    if (endX - startX > 50) prevBtn.click();
+    if (startX - endX > 50) nextBtn.click();
+});
+</script>
+
+</body>
+</html>

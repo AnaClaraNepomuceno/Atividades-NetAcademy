@@ -1,0 +1,395 @@
+.indie-spotify-embed {
+	background: #fff8;
+	border-radius: 18px;
+	box-shadow: 0 2px 16px #1db95433, 0 2px 12px #b83b5e22;
+	max-width: 420px;
+	margin: 2em auto 2.5em auto;
+	padding: 1.2em 1em 1.5em 1em;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.indie-spotify-frame {
+	border-radius: 12px;
+	box-shadow: 0 2px 12px #1db95433;
+	border: none;
+	width: 100%;
+	min-width: 260px;
+	max-width: 400px;
+	height: 352px;
+}
+.indie-tour {
+	padding-left: 0;
+}
+.indie-tour li {
+	margin-bottom: 1.5em;
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid #b83b5e22;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.3em;
+}
+.indie-tour li:last-child {
+	margin-bottom: 0;
+	border-bottom: none;
+}
+.tour-link {
+	display: inline-block;
+	margin-top: 0.4em;
+	background: #b83b5e;
+	color: #fff;
+	padding: 0.4em 1.5em;
+	border-radius: 8px;
+	font-weight: bold;
+	box-shadow: 0 2px 8px #b83b5e33;
+	transition: background 0.2s, color 0.2s, transform 0.2s;
+	text-decoration: none;
+	min-width: 170px;
+	text-align: center;
+}
+.tour-link:hover {
+	background: #355c7d;
+	color: #fff;
+	transform: scale(1.07);
+}
+.indie-tour li {
+	margin-bottom: 1.5em;
+	padding-bottom: 0.5em;
+	border-bottom: 1px solid #b83b5e22;
+	text-align: center;
+}
+.indie-tour li:last-child {
+	margin-bottom: 0;
+	border-bottom: none;
+}
+.tour-city {
+	color: #355c7d;
+	font-size: 1.05em;
+	font-style: italic;
+	margin-bottom: 0.2em;
+	display: inline-block;
+}
+.tour-link {
+	display: inline-block;
+	margin-top: 0.4em;
+	background: #b83b5e;
+	color: #fff;
+	padding: 0.4em 1.1em;
+	border-radius: 8px;
+	font-weight: bold;
+	box-shadow: 0 2px 8px #b83b5e33;
+	transition: background 0.2s, color 0.2s, transform 0.2s;
+	text-decoration: none;
+}
+.tour-link:hover {
+	background: #355c7d;
+	color: #fff;
+	transform: scale(1.07);
+}
+p, li, label, input, textarea, a, .indie-desc, .indie-social, .indie-form {
+	text-align: justify;
+}
+/* --- SLIDE INDIE --- */
+.indie-slider {
+	position: relative;
+	max-width: 350px;
+	margin: 2.5em auto 2em auto;
+	background: #fff6;
+	border-radius: 22px;
+	box-shadow: 0 4px 32px #b83b5e22, 0 1.5px 8px #355c7d22;
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1.5em 0.5em;
+}
+.slide-track {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.slide-img {
+	display: none;
+	max-width: 300px;
+	width: 90vw;
+	border-radius: 18px;
+	box-shadow: 0 4px 24px #355c7d33, 0 1.5px 8px #b83b5e22;
+	filter: grayscale(10%) contrast(1.1) brightness(1.05);
+	transition: filter 0.3s, transform 0.3s, opacity 0.4s;
+	opacity: 0;
+	margin: 0 auto;
+}
+.slide-img.active {
+	display: block;
+	opacity: 1;
+	filter: grayscale(0%) contrast(1.2) brightness(1.1);
+	transform: scale(1.03) rotate(-1deg);
+}
+.slide-btn {
+	background: #b83b5e;
+	color: #fff;
+	border: none;
+	border-radius: 50%;
+	width: 38px;
+	height: 38px;
+	font-size: 1.7em;
+	cursor: pointer;
+	margin: 0 0.5em;
+	box-shadow: 0 2px 8px #b83b5e33;
+	transition: background 0.2s, transform 0.2s;
+	z-index: 2;
+}
+.slide-btn:hover {
+	background: #355c7d;
+	transform: scale(1.1);
+}
+
+/* --- INDIE AJUSTES GERAIS --- */
+.indie-desc {
+	text-align: center;
+	font-size: 1.2rem;
+	margin: 1.5em auto 1em auto;
+	max-width: 600px;
+	background: #fff7;
+	border-radius: 12px;
+	padding: 1em 2em;
+	box-shadow: 0 2px 12px #b83b5e22;
+}
+
+.indie-audio {
+	background: #fff8;
+	border-radius: 10px;
+	box-shadow: 0 2px 12px #b83b5e22;
+	width: 90%;
+	max-width: 400px;
+}
+
+.indie-video-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #fff8;
+	border-radius: 16px;
+	box-shadow: 0 2px 16px #355c7d22;
+	padding: 1.5em 0;
+	margin: 2em auto;
+	max-width: 650px;
+}
+
+.indie-tour {
+	background: #fff8;
+	border-radius: 10px;
+	padding: 1em 2em;
+	box-shadow: 0 2px 12px #b83b5e22;
+	max-width: 500px;
+	margin: 1.5em auto;
+	list-style: none;
+}
+.indie-tour li {
+	margin-bottom: 0.7em;
+	font-size: 1.1em;
+	display: flex;
+	align-items: center;
+}
+.tour-date {
+	font-weight: bold;
+	color: #b83b5e;
+	margin-right: 0.5em;
+}
+
+.indie-social {
+	text-align: center;
+	margin-bottom: 0.5em;
+}
+.indie-social-links {
+	display: flex;
+	justify-content: center;
+	gap: 1.5em;
+	margin-bottom: 2em;
+}
+.indie-social-links a {
+	background: #b83b5e;
+	color: #fff;
+	padding: 0.5em 1.2em;
+	border-radius: 8px;
+	font-weight: bold;
+	box-shadow: 0 2px 8px #b83b5e33;
+	transition: background 0.2s, color 0.2s, transform 0.2s;
+	text-decoration: none;
+}
+.indie-social-links a:hover {
+	background: #355c7d;
+	color: #fff;
+	transform: scale(1.07);
+}
+
+.indie-form {
+	background: #fff8;
+	border-radius: 16px;
+	box-shadow: 0 2px 16px #b83b5e22;
+	max-width: 400px;
+	margin: 2em auto;
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+.indie-form label {
+	color: #355c7d;
+	font-weight: bold;
+	margin-bottom: 0.2em;
+}
+.indie-form input, .indie-form textarea {
+	border: 1.5px solid #b83b5e55;
+	border-radius: 8px;
+	padding: 0.7em;
+	background: #f7cac955;
+	color: #2d2d2d;
+	font-size: 1em;
+	margin-top: 0.2em;
+	outline: none;
+	transition: border 0.2s, background 0.2s;
+}
+.indie-form input:focus, .indie-form textarea:focus {
+	border: 2px solid #b83b5e;
+	background: #fff;
+}
+.indie-form input[type="submit"] {
+	background: linear-gradient(90deg, #b83b5e 60%, #355c7d 100%);
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	box-shadow: 0 2px 8px #b83b5e33;
+	transition: background 0.2s, transform 0.2s;
+}
+.indie-form input[type="submit"]:hover {
+	background: linear-gradient(90deg, #355c7d 60%, #b83b5e 100%);
+	transform: scale(1.04);
+}
+
+/* Indie Style para The Marías */
+body {
+	background: linear-gradient(120deg, #f7cac9 0%, #92a8d1 100%);
+	font-family: 'Montserrat', 'Courier New', Courier, monospace;
+	color: #2d2d2d;
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	letter-spacing: 0.03em;
+}
+
+h1 {
+	font-family: 'Pacifico', cursive, 'Montserrat', sans-serif;
+	font-size: 3rem;
+	color: #b83b5e;
+	text-align: center;
+	margin-top: 2rem;
+	letter-spacing: 0.1em;
+	text-shadow: 2px 2px 8px #fff6, 0 2px 8px #b83b5e33;
+}
+
+h2 {
+	font-family: 'Montserrat', 'Courier New', Courier, monospace;
+	color: #355c7d;
+	margin-top: 2.5rem;
+	margin-bottom: 1rem;
+	text-align: left;
+	border-left: 4px solid #b83b5e;
+	padding-left: 0.5em;
+}
+
+p, li, label, input, textarea, a {
+	font-family: 'Montserrat', 'Courier New', Courier, monospace;
+	font-size: 1.1rem;
+}
+
+a {
+	color: #b83b5e;
+	text-decoration: none;
+	transition: color 0.2s;
+}
+a:hover {
+	color: #355c7d;
+	text-decoration: underline wavy #b83b5e;
+}
+
+ul {
+	background: #fff8;
+	border-radius: 10px;
+	padding: 1em 2em;
+	box-shadow: 0 2px 12px #b83b5e22;
+	max-width: 500px;
+	margin: 1.5em auto;
+}
+
+img {
+	display: block;
+	max-width: 320px;
+	width: 90%;
+	margin: 2em auto 1em auto;
+	border-radius: 18px;
+	box-shadow: 0 4px 24px #355c7d33, 0 1.5px 8px #b83b5e22;
+	filter: grayscale(10%) contrast(1.1) brightness(1.05);
+	transition: filter 0.3s, transform 0.3s;
+}
+img:hover {
+	filter: grayscale(0%) contrast(1.2) brightness(1.1);
+	transform: scale(1.03) rotate(-1deg);
+}
+
+audio, iframe {
+	display: block;
+	margin: 2em auto;
+	border-radius: 12px;
+	box-shadow: 0 2px 16px #355c7d22;
+	background: #fff8;
+}
+
+form {
+	background: #fff8;
+	border-radius: 16px;
+	box-shadow: 0 2px 16px #b83b5e22;
+	max-width: 400px;
+	margin: 2em auto;
+	padding: 2em;
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+input, textarea {
+	border: 1.5px solid #b83b5e55;
+	border-radius: 8px;
+	padding: 0.7em;
+	background: #f7cac955;
+	color: #2d2d2d;
+	font-size: 1em;
+	margin-top: 0.2em;
+	outline: none;
+	transition: border 0.2s, background 0.2s;
+}
+input:focus, textarea:focus {
+	border: 2px solid #b83b5e;
+	background: #fff;
+}
+
+input[type="submit"] {
+	background: linear-gradient(90deg, #b83b5e 60%, #355c7d 100%);
+	color: #fff;
+	font-weight: bold;
+	border: none;
+	cursor: pointer;
+	box-shadow: 0 2px 8px #b83b5e33;
+	transition: background 0.2s, transform 0.2s;
+}
+input[type="submit"]:hover {
+	background: linear-gradient(90deg, #355c7d 60%, #b83b5e 100%);
+	transform: scale(1.04);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap');
